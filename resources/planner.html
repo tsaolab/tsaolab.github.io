@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <!--<base target="_blank">--><base href="." target="_self">
+  <meta name="description" content="Tsao Lab">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title>Planner | Tsao Lab</title>
+
+  <meta property="og:title" content="Tsao Lab">
+  <meta property="og:site_name" content="tsaolab.caltech.edu">
+  <meta property="og:description" content="Website for Tsao Lab">
+  <link rel="stylesheet" href="../files/font.css" type="text/css">
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="format-detection" content="telephone=no"> <!-- no weird telephone number formatting -->
+
+  <style type="text/css">
+  </style>
+
+</head>
+
+
+<body><div class="pre"><div style="text-align: center; margin-left: 0em; /* INDENTS */">
+==============
+-- <a href="../index.html">Tsao Lab</a> --
+==============</div>
++---------------+--------+--------------+----------+-----------+----------+---------+
+| <a href="../lab_positions.html">Lab Positions</a> | <a href="../people.html">People</a> | <a href="../publications.html">Publications</a> | <a href="../research.html">Research</a> | <a href="../resources.html">Resources</a> | <a href="../teaching.html">Teaching</a> | <a href="../contact.html">Contact</a> |
++---------------+--------+--------------+----------+-----------+----------+---------+
+
+
+Planner
+
+
+About Planner
+<div class="indent">
+Planner is a software that assists in MR-guided electrophysiology. It was designed by Shay Ohayon, a grad student in the Tsao lab. The software enables easy visualization of the target site and allows the user to place virtual chambers, grids, and electrodes with different designs. It can also find optimal trajectories by finding the optimal grid hole, rotation and tilt angle.  The other key feature of this software is its ability to automatically solve the registration problem between MR space and stereotactic space. It can report the stereotactic parameters needed to place the manipulator's tip and align it with the planned chamber position in any desierable direction:
+
+<img src="../files/planner.jpg" width=640>
+
+Recently, we added a new feature that allows to design custom grids with each grid hole going in arbitrary direction. Such grids can be automatically exported as a Solidworks model and printed on a high end 3D printer (Projet).
+</div>
+
+Publication:
+<div class="indent">
+Detailed description of the approach can be found in the following manuscript: <a href="http://www.ncbi.nlm.nih.gov/pubmed/22192950" target="_blank">Ohayon S, Tsao DY, MR-Guided Stereotactic Navigation</a>
+</div>
+
+Download instructions:
+<div class="indent">
+This software is available for research purposes only. Please send your download request to <a href="mailto:shayo@mit.edu">shayo@mit.edu</a>. Make sure the email address you use to send this request is a university affilated email address.
+</div>
+
+System Requirements
+<div class="indent">
+Operating System: Windows XP/Vista (32 or 64 bit), Linux (64 bit only), Mac (64 bit only)
+Matlab: Should be compatible with R2009b and later verions
+Solidworks: If you are planning to print custom grids using the grid export function, make sure you are running with Windows 64 bit. Solidworks 2011, 2012 and 2013 are supported.
+Memory: Although you can probably run planner with as little as 1G of RAM, it is usually preferred to have at least 4G. The more volumes you load, the more memory will be required.
+Screen Resolution: At least 800 vertical pixels. If you are running on a windows laptop with 1200x800 (or similar), move the taskbar location to the left.
+CPU: No real requirement here, but you probably want Core 2 Duo or stronger
+Graphic card: If you plan to visualize surfaces, a good graphics card is required (nVidia Geforce/Quadro)
+</div>
+
+Installation instructions:
+<div class="indent">
+(1) Unpack the compressed file somewhere.
+(2) for Window users
+<div class="indent">(a) Add a system environment variable (Start->Control Panel->System->Edit the system environment variables):
+<div class="indent">Name: MATLAB64BIN
+Value: C:\MATLAB\R2009b_x64\bin\win64\MATLAB.exe (modify this to where you installed matlab)
+</div>(b) use Runme_x64.bat to run planner
+(c) If you are using 32 bin version, add this variable:
+<div class="indent">Name: MATLAB32BIN
+Value: C:\MATLAB\R2009b_x32\bin\win64\MATLAB.exe (modify this to where you installed the 32-bit version of matlab)
+</div>(d) use Runme.bat to run planner
+</div>(2) for Linux/Mac users:
+<div class="indent">use runme.csh to run planner (assuming matlab is already in the path)
+</div></div>
+
+Instruction Manual and Videos: [Under Construnction]
+<div class="indent">
+Quick tour of Planner (demonstration how to place virtual chamber, grid and to solve the registration problem)
+Basic usage of planner: video tutorial
+Calibration of planner with stereotactic models: powerpoint presentation
+</div>
+
+Citing Planner:
+<div class="indent">
+Please cite this article as:
+Ohayon S, Tsao DY, MR-Guided Stereotactic Navigation,
+<a href="http://www.ncbi.nlm.nih.gov/pubmed/22192950" target="_blank">J Neurosci Methods</a>. 2012 Mar 15;204(2):389-97. Epub 2011 Dec 13
+</div></div>
+
+
+
+
+</div>
+</body></html>

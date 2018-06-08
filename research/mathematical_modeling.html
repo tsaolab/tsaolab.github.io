@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <!--<base target="_blank">--><base href="." target="_self">
+  <meta name="description" content="Tsao Lab">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title>Mathematical Modeling | Tsao Lab</title>
+
+  <meta property="og:title" content="Tsao Lab">
+  <meta property="og:site_name" content="tsaolab.caltech.edu">
+  <meta property="og:description" content="Website for Tsao Lab">
+  <link rel="stylesheet" href="../files/font.css" type="text/css">
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="format-detection" content="telephone=no"> <!-- no weird telephone number formatting -->
+
+  <style type="text/css">
+  </style>
+
+</head>
+
+
+<body><div class="pre"><div style="text-align: center; margin-left: 0em; /* INDENTS */">
+==============
+-- <a href="../index.html">Tsao Lab</a> --
+==============</div>
++---------------+--------+--------------+----------+-----------+----------+---------+
+| <a href="../lab_positions.html">Lab Positions</a> | <a href="../people.html">People</a> | <a href="../publications.html">Publications</a> | <a href="../research.html">Research</a> | <a href="../resources.html">Resources</a> | <a href="../teaching.html">Teaching</a> | <a href="../contact.html">Contact</a> |
++---------------+--------+--------------+----------+-----------+----------+---------+
+
+
+Mathematical Modeling
+<div class="indent">
+The field of vision research has been dominated by machine learning and statistics.  For example, to solve the problem of recognizing an object across changes in perspective (the “invariance problem”, Figure 1a), the conventional approach has been to hand pick multiple views of the same object, and then to train classifiers to perform view-invariant detection.  The problem with this approach is that it delegates the core challenge of perceiving invariance to the hand picker responsible for training, i.e., the biological visual system we are trying to understand.  We have developed a mathematical theory of vision that differs fundamentally from previous approaches (Tsao and Tsao, in preparation).  The property that we use to solve the invariance problem, surface contiguity, is categorically different from that used in the past: it is topological not image-based.  Given a stream of image frames of a scene, our strategy is not to compute whether a specific object is present within each frame through a statistical approach (the conventional solution), but to decompose the image into patches and compute for each patch the physical surface to which it belongs; the essential information for this computation turns out to reside in mappings between successive views of the environment (Figure 1b).  Using differential topology, we prove a set of theorems that show how each pixel can be assigned to a topologically contiguous surface component from a pair of images of a scene (‘segmentation’), and how to track a particular topologically contiguous surface component through changes in perspective and dynamic occlusion in a sequence of images (‘invariant tracking’).  When the invariance problem is framed in terms of topological surface representation, its solution turns out to be almost trivially simple.  Furthermore, the theory works in practice: we are able to segment and track objects in cluttered video despite severe appearance changes due to occlusion (Figure 1c), a feat that has eluded computer vision up to now. The theory makes critical experimental predictions.  The computations we describe for solving segmentation and invariant tracking are necessarilylocal and therefore likely accomplished in “retinotopic” visual areas (i.e., areas located early in the visual system in which neighboring cells represent neighboring regions of space, creating maps of space inside the brain).  Thus we predict that retinotopic visual areas are making an essential contribution to object perception by creating folders that track the visual information pertaining to each discrete object in the world. Understanding how the pieces of sensation are integrated into the percept of whole objects is one of the biggest challenges of neuroscience, and our mathematical theory provides a new roadmap to dissect this circuit.  Figure 1. The mathematical basis for perceiving object invariance.(a) The invariance problem: how can one perceive that very different views represent the same object? (b) Mathematical formulation of the invariance problem: Image patches A and C belong to the same global object, but are not simultaneously visible. How can the visual system determine that they belong to the same object?  Light rays from objects in the environment project to each observation point.  In (Tsao and Tsao, in preparation), we prove that the mappings between the spheres of rays at successive observation points (four are shown) fully encode the topological structure of the environment, i.e., the global contiguous surfaces and their boundaries. (c) Top: three successive frames of leaves; bottom: a computational implementation of topological surface representation is able to successfully segment and track each leaf despite severe changes in appearance due to partial occlusion (e.g., the leaf marked by *). The biological question we want to answer is: how are these object labels computed by the brain?
+</div>
+
+
+</div>
+</body></html>
